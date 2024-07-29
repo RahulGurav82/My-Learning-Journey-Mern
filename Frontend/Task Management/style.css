@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background: #261F47;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .heading {
+    font-size: 6rem;
+    color: white;
+    font-weight: 600;
+}
+
+header p{
+    color: #595191;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+form div{
+    margin: 1.3rem;
+}
+form p {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+form input {
+    padding: 1rem;
+    width: 400px;
+    border-radius: 18px;
+    background: #595191;
+    border: none;
+}
+#checkbox{
+    width: 1rem;
+    margin: 8px 0px 0px 65%;
+}
+form input::placeholder {
+    color: #261F47;
+}
+
+button{
+    width: 400px;
+    border-radius: 18px;
+    height: 3rem;
+    background: #EA3757;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: none;
+}

@@ -1,0 +1,597 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+    /* height: 100%;
+    width: 100%; */
+    font-family: "Poppins";
+}
+
+nav {
+    height: 80px;
+    width: 100%;
+    padding-right: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
+nav .logo img {
+    height: 5rem;
+}
+
+/* Search Bar Design Start from Here */
+
+nav .search-bar form {
+    width: 28.125rem;
+    height: 40px;
+    border: 2px solid gray;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .search-bar form i {
+    font-size: 2rem;
+    padding-left: .4rem;
+}
+
+nav .search-bar form input {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-left: .3rem;
+    border: none;
+    outline: none;
+}
+
+nav .search-bar form .custom-caret {
+    caret-color: transparent; /* Hide default caret */
+    position: relative;
+}
+
+nav .search-bar form .custom-caret::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px; /* Caret width */
+    height: 1em; /* Caret height */
+    background-color: black; /* Caret color */
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+
+}
+
+nav .search-bar form input[type="search"] {
+    cursor: text; /* Default text cursor */
+    caret-color: red; /* Changes the caret color to red */
+  }
+
+nav .search-bar form input[type="search"]:hover {
+    cursor: pointer; /* Changes cursor on hover */
+  }
+
+nav .search-bar form input::placeholder {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+nav .search-bar form button {
+    padding: 0 .4rem;
+    height: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: #FC895D;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+nav .search-bar form button:hover {
+    opacity: .7;
+    color: black;
+}
+
+/* Developer Profile Pic Design. */
+
+nav .menu {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-image: url("./images/devloper.png");
+    background-color: aqua;
+    background-size: cover;
+    cursor: pointer;
+}
+
+nav .menu:hover {
+    opacity: .7;
+}
+
+/* Main Section Design */
+
+
+.main {
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    background: #f6f7f9;
+}
+
+.main .hr-scroll {
+    overflow: scroll;
+    white-space: nowrap;
+    padding-right: 1rem;
+}
+
+.main .hr-scroll .div1 {
+    height: 300px;
+    width: 30%;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    margin-top: 1.5em;
+    display: inline-block;
+    position: relative; /* Ensure the parent is positioned relative */
+}
+.main .hr-scroll .div1 .info {
+    height: 50%;
+    width: 100%;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    position: absolute; /* Position absolutely within the relative parent */
+    bottom: 0; /* Align to the bottom */
+    text-align: center;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+.main .hr-scroll .div1 .info p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff30b;
+}
+.whatsapp-button {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px;
+}
+.whatsapp-button:hover {
+    background-color: #1DA851;
+}
+
+.main .hr-scroll .img1{
+    background-image: url("./images/fanta-thumbnail.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.main .hr-scroll .img2{
+    background-image: url("./images/Bike-Rental-System-Thumbnail.webp");
+    background-size: cover;
+    background-position: center;
+}
+.main .hr-scroll .img3{
+    background-image: url("./images/Cyber-Cafe-Thumbnail.png");
+    background-size: cover;
+    background-position: center;
+}
+.main .hr-scroll .img4{
+    background-image: url("./images/Buss-Pass-Thumbnail1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.main .hr-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+
+.projects {
+    padding-top: 1rem;
+}
+
+.projects p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgb(136, 132, 132);
+}
+
+.project {
+    white-space: nowrap;
+    overflow: scroll;
+    padding: 1rem 1rem 0 0;
+}
+
+.project .div1{
+    height: 250px;
+    width: 250px;
+    border-radius: 10px;
+    margin: 0 1rem 0 0;
+    position: relative; /* Ensure the parent is positioned relative */
+    display: inline-block;
+    background: #b6e73b;
+    background-size: cover;
+    background-position: center;
+}
+.project .div1 .info {
+    height: 50%;
+    width: 100%;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    position: absolute; /* Position absolutely within the relative parent */
+    bottom: 0; /* Align to the bottom */
+    text-align: center;
+    
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(3.7px);
+    -webkit-backdrop-filter: blur(3.7px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+.project .div1 .info p{
+    color: #000000;
+    font-weight: 600;
+}
+
+.project .project-image1{
+    background-image: url("./images/Whether-app-Thumbnail.png");
+    background-size: cover;
+    background-position: center;
+}
+.project .project-image2{
+    background-image: url("./images/blood-donor-thumbnail.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.project .project-image3{
+    background-image: url("./images/Employee-management-thumbnail.png");
+    background-size: cover;
+    background-position: center;
+}
+.project .project-image4{
+    background-image: url("./images/voting-system.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.project .project-image5{
+    background-image: url("./images/agency-thumbnail.png");
+    background-size: cover;
+    background-position: center;
+}
+.project .project-image6{
+    background-image: url("./images/Digistic-thumbnail.png");
+    background-size: cover;
+    background-position: center;
+}
+.project .project-image7{
+    background-image: url("./images/Jarvis-thumbnail.webp");
+    background-size: cover;
+    background-position: center;
+}
+.project .project-image8{
+    background-image: url("./images/Complaint-mgt-thumbnail.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.project .project-image9{
+    background-image: url("./images/hospital-management-thumbnail.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.project .project-image10{
+    background-image: url("./images/news-thumbnail.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.project .project-image11{
+    background-image: url("./images/Touris-managment-Thumbnail.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.project .project-image12{
+    background-image: url("./images/app-design-thumbnail.png");
+    background-size: cover;
+    background-position: center;
+}
+.project .project-image13{
+    background-image: url("./images/online-notes-sharing-thumbnail.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.project .project-image14{
+    background-image: url("./images/food-delivery-thumbnail.png");
+    background-size: cover;
+    background-position: center;
+}
+.project .project-image15{
+    background-image: url("./images/library-mgt-thumbnail.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.project .project-image16{
+    background-image: url("./images/Student-Record-Management-thumbnail.png");
+    background-size: cover;
+    background-position: center;
+}
+.project .project-image17{
+    background-image: url("./images/air-tracking-thumbnail.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.project .project-image18{
+    background-image: url("./images/Virtual-meeting-thumbnail.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+.project::-webkit-scrollbar {
+    display: none;
+}
+
+.main .cta {
+    padding: 3rem;
+    text-align: center;
+}
+
+.main .cta p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #3295ec;
+}
+
+.cta button {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    margin-top: 1rem;
+  }
+  
+.cta button:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+.cta button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+.cta button:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+.cta a {
+    text-decoration: none;
+    color: #36395A;
+}
+
+/* social media  */
+
+.main .social {
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+  }
+
+.main .social i {
+    margin: 1rem;
+    cursor: pointer;
+  }
+
+#bxl-twitter{
+    color: #1DA1F2;
+}
+
+/* #bxl-instagram{
+    
+  } */
+#bxl-facebook-circle{
+    color: #1DA1F2;
+  }
+#bxl-linkedin-square{
+    color: #0E76A8;
+  }
+
+/* footer design */
+
+footer {
+    background: #151515;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+footer p {
+    margin-top: .5rem;
+}
+
+footer .info {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .info .logo img {
+    height: 4rem;
+    margin-top: 2rem;
+}
+
+footer .info .service {
+    color: #d1c7c7;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+footer .info .about {
+    color: #d1c7c7;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+footer .copyright {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+footer .copyright .hr {
+    height: 1px;
+    width: 100%;
+    background: wheat;
+}
+
+footer .copyright p{
+    color: #d1c7c7;
+    margin-top: 2rem;
+}
+
+@media (max-width: 780px) {
+    nav .logo img {
+        height: 4rem;
+    }
+
+    .main .hr-scroll .div1 {
+        height: 280px;
+        width: 40%;
+    }
+}
+
+@media (max-width: 700px) {
+    nav .logo img {
+        height: 3rem;
+    }
+
+    nav .menu {
+        height: 60px;
+        width: 60px;
+    }
+
+    .main .hr-scroll .div1 {
+        height: 280px;
+        width: 45%;
+    }
+}
+
+@media (max-width: 640px) {
+    nav .search-bar form {
+        width: 20.125rem;
+    }
+
+    .main .hr-scroll .div1 {
+        height: 280px;
+        width: 80%;
+    }
+
+    footer .info {
+        flex-direction: column;
+        /* justify-content: space-around; */
+        align-items: center;
+    }
+}
+
+@media (max-width: 510px) {
+    nav .search-bar form {
+        width: 18.125rem;
+    }
+
+    nav .logo img {
+        height: 3rem;
+    }
+
+    .main .hr-scroll .div1 {
+        height: 270px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 460px) {
+    nav .search-bar form {
+        width: 18.125rem;
+    }
+
+    nav .logo img {
+        height: 2rem;
+    }
+}
+
+@media (max-width: 440px) {
+    nav .search-bar form {
+        width: 15.125rem;
+        height: 30px;
+    }
+
+    nav .logo img {
+        height: 2rem;
+    }
+
+    nav .search-bar form i {
+        font-size: 1rem;
+        padding-left: .4rem;
+    }
+
+    nav .menu {
+        height: 50px;
+        width: 50px;  
+    }
+
+    nav {
+        padding-right: .5rem;
+    }
+}
+
+@media (max-width: 364px) {
+    nav .search-bar form {
+        width: 14.125rem;
+    }
+
+    nav .search-bar form input::placeholder {
+        font-size: .9rem;
+    }
+}

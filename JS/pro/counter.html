@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body style="text-align: center;">
+    <p class="display">0</p>
+    <button class="minus">-</button>
+    <button class="plus">+</button>
+
+    <script>
+        let display = document.querySelector(".display");
+        let minus = document.querySelector(".minus");
+        let plus = document.querySelector(".plus");
+        let i = 0
+        plus.addEventListener("click", ()=>{
+            i++
+            display.innerHTML = i;
+        });
+        minus.addEventListener("click", ()=>{
+            if(i === 0){
+                alert("cant minus");
+            } else {
+                i--
+                display.innerHTML = i;
+            }
+        })
+    </script>
+</body>
+</html>
