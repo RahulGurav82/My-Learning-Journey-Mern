@@ -1,0 +1,26 @@
+    // Extract user details from the request body
+    // Check if any required fields are empty
+    // Get the path of the avatar image from the request files
+    // Check if the avatar file is present
+    // Get the path of the cover image from the request files (if provided)
+    // Check if a user with the given email or username already exists
+    // If the user already exists, delete the uploaded images and throw an error
+    // Upload the avatar image to Cloudinary
+    // Upload the cover image to Cloudinary (if provided)
+    // Check if the avatar upload was successful
+    // Create a new user in the database with the provided details and uploaded images
+    // Find the created user and exclude the password and refreshToken from the result
+    // Check if the user was created successfully
+    // Return the created user in the response with a success message
+
+
+
+
+
+
+
+
+
+
+
+
