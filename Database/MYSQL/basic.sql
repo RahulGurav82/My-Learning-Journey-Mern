@@ -16,12 +16,12 @@ CREATE TABLE student (
 
 -- Insert data into the student table
 INSERT INTO student VALUES
-    (101, "Rahul", 21),
-    (102, "Rhunal", 20),
-    (103, "Sahil", 19),
-    (104, "Aman", 22),
-    (105, "Priya", 20),
-    (106, "Rohit", 23);
+    (101, 'Rahul', 21),
+    (102, 'Rhunal', 20),
+    (103, 'Sahil', 19),
+    (104, 'Aman', 22),
+    (105, 'Priya', 20),
+    (106, 'Rohit', 23);
 
 -- Select all data from the student table
 SELECT * FROM student;
@@ -57,14 +57,9 @@ CREATE TABLE user (
 );
 
 -- Insert data into the user table
-INSERT INTO user
-(id, age, name, email, followers, following)
-VALUES
-(1, 21, "Rahul", "rahul@gmail.com", 1500, 299),
-(2, 19, "Rhunal", "rhunal@gmail.com", 500, 2),
-(3, 22, "Sahil", "sahil@gmail.com", 100, 100),
-(4, 24, "Aman", "aman@gmail.com", 2000, 150),
-(5, 23, "Priya", "priya@gmail.com", 1800, 300);
+INSERT INTO user (id, age, name, email, followers, following) VALUES
+    (4, 24, 'Aman', 'aman@gmail.com', 2000, 150),
+    (5, 23, 'Priya', 'priya@gmail.com', 1800, 300);
 
 -- Select the first 2 rows from the user table
 SELECT * FROM user
@@ -72,7 +67,7 @@ LIMIT 2;
 
 -- Select the name and email of users whose email is in the specified list
 SELECT name, email FROM user 
-WHERE email IN ("sahil@gmail.com", "ssss@gmail.com", "hhh@gmail.com");
+WHERE email IN ('sahil@gmail.com', 'ssss@gmail.com', 'hhh@gmail.com');
 
 -- Create the post table with a foreign key reference to the user table
 CREATE TABLE post (
@@ -84,11 +79,11 @@ CREATE TABLE post (
 
 -- Insert data into the post table
 INSERT INTO post (id, content, user_id) VALUES
-(1, 'Hello World!', 1),
-(2, 'Just had a great day!', 2),
-(3, 'Happy Birthday to me!', 3),
-(4, 'Enjoying the vacation', 4),
-(5, 'Back to work', 5);
+    (1, 'Hello World!', 1),
+    (2, 'Just had a great day!', 2),
+    (3, 'Happy Birthday to me!', 3),
+    (4, 'Enjoying the vacation', 4),
+    (5, 'Back to work', 5);
 
 -- Select the maximum number of followers from the user table
 SELECT MAX(followers)
@@ -111,3 +106,36 @@ WHERE followers > 200;
 SELECT age, COUNT(id)
 FROM user
 GROUP BY age;
+
+-- Group by age and select the maximum number of followers for each age group with followers greater than 200
+SELECT age, MAX(followers)
+FROM user
+GROUP BY age
+HAVING MAX(followers) > 200;
+
+-- Update the followers count to 200 for users who are 21 years old
+UPDATE user 
+SET followers = 200
+WHERE age = 21;
+
+-- Allow updates without a WHERE clause
+SET sql_safe_updates = 0;
+
+-- Delete users who are 21 years old
+DELETE FROM user
+WHERE age = 21;
+
+-- Add a new column 'country' with a default value 'india'
+ALTER TABLE user
+ADD COLUMN country VARCHAR(20) DEFAULT 'india';
+
+-- Rename the table 'instaUser' to 'user'
+ALTER TABLE instaUser 
+RENAME TO user;
+
+-- Change the 'followers' column to 'subs' with a default value of 0
+ALTER TABLE user 
+CHANGE COLUMN followers subs INT DEFAULT 0;
+
+-- Remove all data from the user table
+TRUNCATE TABLE user;
