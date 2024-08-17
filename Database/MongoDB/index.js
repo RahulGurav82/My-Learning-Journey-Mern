@@ -16,3 +16,23 @@ const userSchema = new mongoose.Schema({
 });
 
 const User = mongoose.model("User", userSchema);
+
+// const user1 = new User({
+//     name : "Rahul",
+//     email : "rahul@gmail.com",
+//     age : 21
+// });
+
+// user1.save()
+// .then((res)=> {
+//     console.log(res);
+// })
+// .catch((err)=> {
+//     console.log(err);
+// });
+
+User.insertMany([
+    {name: "Rhunal", email : "rhunal@gmail.com", age:20},
+    {name: "sahil", email : "sahil@gmail.com", age:20}
+]);
+
