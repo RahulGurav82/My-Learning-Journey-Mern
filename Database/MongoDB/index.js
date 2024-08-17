@@ -36,11 +36,19 @@ const User = mongoose.model("User", userSchema);
 //     {name: "sahil", email : "sahil@gmail.com", age:20}
 // ]);
 
-User.find({age : {$gt : 20}}).then((res)=> {
-    console.log(res);
-});
+// User.find({age : {$gt : 20}}).then((res)=> {
+//     console.log(res);
+// });
 
-User.findById('66c0def7c551842fe1f76ece').then((res)=> {
-    console.log(res);
+// User.findById('66c0def7c551842fe1f76ece').then((res)=> {
+//     console.log(res);
+// });
+
+// User.updateOne({name : "Rahul"}, {name : "Rohan"}).then((res)=> {
+//     console.log(res);
+// });
+
+User.findOneAndUpdate({},{},{new:true}).then((res)=>{
+    
 });
 
