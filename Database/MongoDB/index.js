@@ -31,8 +31,16 @@ const User = mongoose.model("User", userSchema);
 //     console.log(err);
 // });
 
-User.insertMany([
-    {name: "Rhunal", email : "rhunal@gmail.com", age:20},
-    {name: "sahil", email : "sahil@gmail.com", age:20}
-]);
+// User.insertMany([
+//     {name: "Rhunal", email : "rhunal@gmail.com", age:20},
+//     {name: "sahil", email : "sahil@gmail.com", age:20}
+// ]);
+
+User.find({age : {$gt : 20}}).then((res)=> {
+    console.log(res);
+});
+
+User.findById('66c0def7c551842fe1f76ece').then((res)=> {
+    console.log(res);
+});
 
