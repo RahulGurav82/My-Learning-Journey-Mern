@@ -52,3 +52,32 @@ User.findOneAndUpdate({},{},{new:true}).then((res)=>{
     
 });
 
+User.findByIdAndDelete("").then(()=>{
+
+})
+
+const bookSchema = momgoose.Schema({
+    title : {
+        type : String,
+        required : true
+    },
+    author : {
+        type : String
+    },
+    price : {
+        type : Number
+    },
+});
+
+const Book = mongoose.model("Book", bookSchema);
+
+let book1 = new Book({
+    title : "Marathi",
+    author : "Vs",
+    price : 200
+});
+
+book1.save().then((res)=> {
+    
+})
+
