@@ -1,9 +1,11 @@
-import "./App.css";
+// import "./App.css";
 // import { Title } from "./Title.jsx";
 // import Product from "./Product.jsx";
 // import MsgBox from "./msgBox.jsx"; // Fix case sensitivity
-import "./Product.css";
+// import "./Product.css";
 import ProductTab from "./ProductTab.jsx";
+import Button from "./Button.jsx";
+import Form from "./Form.jsx";
 
 function App() {
   // let options = ["hi-tech", "durable", "Quality", "Customize"];
@@ -14,8 +16,12 @@ function App() {
       <Product title="Realme Y" features={options} price={20000} />
       <Product title="Realme Z" features={options} price={15000} />
       <MsgBox userName="Rahul" txtcolor="red" /> Fix typo and case */}
-      <ProductTab />
+      {/* <ProductTab /> */}
 
+
+        {/* <Button /> */}
+
+        <Form />
     </>
   );
 }
