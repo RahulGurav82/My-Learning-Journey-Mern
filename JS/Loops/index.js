@@ -8,3 +8,8 @@ let sq = num.map((num) => {
 
 console.log(sq);
 
+// fillter used fillter elements from an array based on a condition
+
+const age = [10, 20, 25, 30, 35];
+const adults = age.filter(age => age >= 18);
+console.log(adults);
