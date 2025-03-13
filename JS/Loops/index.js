@@ -13,3 +13,9 @@ console.log(sq);
 const age = [10, 20, 25, 30, 35];
 const adults = age.filter(age => age >= 18);
 console.log(adults);
+
+// reduce used to accumulate values into a single result.
+
+const prices = [10, 20, 30, 40];
+const total = prices.reduce((sum, price) => sum + price, 0)
+console.log(total);
