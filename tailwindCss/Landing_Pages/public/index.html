@@ -21,6 +21,20 @@
         .mobile-nav-menu.active {
             display: flex;
         }
+        .menu-toggle {
+            display: none;
+        }
+        .nav-menu {
+                display: flex;
+        }
+        @media (max-width : 876px) {
+            .nav-menu {
+                display: none;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body class="bg-white min-h-screen w-full relative">
@@ -31,10 +45,10 @@
             <h2 class="text-stone-950 font-bold text-4xl cursor-pointer">
                 Jad<span class="text-orange-400">oo</span>
             </h2>
-            <div class="menu-toggle text-2xl md:hidden cursor-pointer" id="menu-toggle">
+            <div class="menu-toggle text-2xl cursor-pointer" id="menu-toggle">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            <ul class="hidden md:flex nav-menu items-center space-x-6 font-medium">
+            <ul class="nav-menu items-center space-x-6 font-medium">
                 <li><a href="#">Destination</a></li>
                 <li><a href="#">Hotels</a></li>
                 <li><a href="#">Flights</a></li>

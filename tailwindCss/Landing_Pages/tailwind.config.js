@@ -2,8 +2,11 @@
 module.exports = {
   content: ["./public/*.html"],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        md: "876px", // Set 'md' breakpoint to 876px
+      },
+    },
   },
   plugins: [],
 }
-
