@@ -1,19 +1,13 @@
 import React from 'react'
+import Card from './components/Card';
 
 const App = () => {
-  const age = 2
   return (
-    <div>
-      {/* <p>{age >= 18 ? "Adult" : "Minnor"}</p> */}
-      { age >= 18 && <WatchBtn />}
-    </div>
+    <>
+    <Card />
+    </>
   );
 
 
 }
-
-const WatchBtn = () => (
-  <button>Watch Now</button>
-)
-
 export default App
