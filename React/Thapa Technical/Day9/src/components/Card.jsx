@@ -4,10 +4,9 @@ import NetflixCard from "./NetflixCard";
 
 const Card = () => {
   return (
-
     <>
     {data.map((data) => (
-            <NetflixCard data={data} />
+      <NetflixCard data={data} />
     ))}
     </>
   );

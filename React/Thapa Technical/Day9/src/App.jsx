@@ -1,12 +1,15 @@
 import React from 'react'
 import Card from './components/Card';
 import Profile from './components/Profile';
+import "./app.css"
 
 const App = () => {
   return (
     <>
-    {/* <Card /> */}
-    <Profile />
+    <div className='section'>
+      <Card />
+    </div>
+      {/* <Profile /> */}
     </>
   );
 
