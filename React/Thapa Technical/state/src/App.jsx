@@ -1,20 +1,10 @@
-import React, { useState } from 'react'
+import List from "./components/List"
+
 
 const App = () => {
 
-  let [num, setNum] = useState(0);
-  
-  const HandleOnclick = () => {
-    setNum(()=> (
-      num++
-    ));
-  }
-
   return (
-    <div>
-      <h1>{num}</h1>
-      <button onClick={HandleOnclick}>Increase</button>
-    </div>
+    <List />
   )
 }
 
