@@ -27,7 +27,7 @@ const TodoForm = ({task, setTask}) => {
         <form onSubmit={(evt)=>handleFormSubmit(evt)}>
             <div>
                 <input type="text" placeholder='Task..' 
-                value={inputValue} 
+                value={inputValue.content} 
                 onChange={(e)=> handleInputChange(e.target.value)} />
             </div>
             <div>
