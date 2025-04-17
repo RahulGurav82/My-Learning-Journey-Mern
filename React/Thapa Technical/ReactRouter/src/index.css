@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+
+
+body {
+    padding: 0 2rem;
+}
+
+a.active {
+    color: red;
+  }
+  a.pending {
+    color: blue;
+  }
+  a.transitioning {
+    view-transition-name: my-transition;
+  }
+  
