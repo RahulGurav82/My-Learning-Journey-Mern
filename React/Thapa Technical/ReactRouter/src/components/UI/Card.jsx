@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Card = ({ movie }) => {
   const {
@@ -7,6 +8,7 @@ const Card = ({ movie }) => {
     poster_path,
     release_date,
     vote_average,
+    id
   } = movie;
 
   const posterUrl = `https://image.tmdb.org/t/p/w500${poster_path}`;
@@ -30,6 +32,11 @@ const Card = ({ movie }) => {
       <p><strong>Release:</strong> {release_date}</p>
       <p><strong>Rating:</strong> ⭐ {vote_average}</p>
       <p style={{ fontSize: '14px', color: '#555' }}>{overview}</p>
+      <NavLink to={`/movie/${id}`}>
+        <button>
+          Watch Now
+        </button>
+      </NavLink>
     </div>
   );
 };

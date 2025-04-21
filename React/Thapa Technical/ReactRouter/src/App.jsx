@@ -7,6 +7,8 @@ import Contact from "./pages/Contact"
 import AppLayout from './components/layouts/AppLayout'
 import ErrorPage from './pages/ErrorPage'
 import GetApiData from './api/GetApiData'
+import MovieCard from './components/UI/MovieCard'
+import {GetFormData} from './pages/Contact'
 
 const App = () => {
 
@@ -27,11 +29,17 @@ const App = () => {
         {
           path : "/movie",
           element : <Movie />,
+          loader: GetApiData,
+        },
+        {
+          path : "/movie/:movieID",
+          element : <MovieCard />,
           loader: GetApiData
         },
         {
           path : "/contact",
-          element : <Contact />
+          element : <Contact />,
+          action : GetFormData,
         },
       ]
     }
