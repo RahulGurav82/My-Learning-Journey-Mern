@@ -1,0 +1,193 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    height: 100vh;
+  }
+  
+  /* Main banner image */
+  main > img {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Header & Nav */
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  
+  nav {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Logo */
+  .logo img {
+    height: 40px;
+  }
+  
+  /* Navigation Menu */
+  .menu ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+  }
+  
+  .menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .menu ul li a:hover {
+    color: #ffd700;
+  }
+  
+  /* Contact Section */
+  .ctc {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .contact {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  
+  .contact i {
+    font-size: 18px;
+    color: white;
+  }
+  
+  /* User Icon */
+  .user i {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Add Property Button */
+  button {
+    padding: 8px 16px;
+    background-color: #ff6b00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #e55e00;
+  }
+  
+  /* Overlay header on banner */
+  main {
+    position: relative;
+  }
+
+  .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .content span {
+    color: white;
+    padding: .5rem 1rem;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 1rem;
+  }
+
+  .content h1 {
+    text-align: center;
+    color: #f4f4f4;
+  }
+
+  .content .search {
+    width: 600px;
+    height: 60px;
+    border-radius: 2rem;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 4px 4px 1rem
+  }
+
+  .content .search input {
+    border: none;
+    width: 100%;
+    outline: none;
+    font-weight: 500;
+    font-size: medium;
+  }
+
+  .content .search .crcl {
+    height: 100%;
+    width: 55px;
+    background-color: #e55e00;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f4f4f4;
+  }
+
+  .content .search .crcl i {
+    font-size: 1.5rem;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

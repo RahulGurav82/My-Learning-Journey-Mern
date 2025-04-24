@@ -7,6 +7,7 @@ const AppLayout = () => {
 
   const navigate  = useNavigation();
   if (navigate.state === "loading") return <h1>Loading...</h1>;
+  
   return (
     <>
         <Header />

@@ -12,8 +12,8 @@ const ErrorPage = () => {
 
   return (
     <>
-    <div>ErrorPage {error.status}</div>
-    <button onClick={handleGoBack}>Go Back</button>
+      <div>ErrorPage {error.status}</div>
+      <button onClick={handleGoBack}>Go Back</button>
     </>
   )
 }
